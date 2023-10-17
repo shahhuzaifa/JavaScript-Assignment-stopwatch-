@@ -1,0 +1,82 @@
+body{
+    background-image: url('https://c0.wallpaperflare.com/preview/194/165/260/stopwatch-gears-work-working-time.jpg'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+    text-align: center;
+    height: 100vh;
+
+    
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color:greenyellow;
+width: 150px;
+display: inline-block;
+background-color: black;
+}
+button{
+    background-color: cornflowerblue;
+    color:black;
+    width: 200px;
+    height: 50px;
+    border-radius: 60px;
+}
+button:active{
+    background-color: orange;
+}
+button:hover{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    
+   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> <br>
+    <br>
+    
+
+    <H1><EM>STOP  WATCH</EM></H1>
+    <br>
+<div>
+    <h1 id="hour">0</h1>
+    <h1 id="minu" > 0 </h1>
+    <h1 id="sec" >0</h1>
+    <h1 id="misec" > 0  </h1>
+    
+</div>
+
+<div>
+<button onclick="go()">START</button>
+<button onclick="ruk()">PAUSE</button>
+<button onclick="re()">RESET</button>
+
+</div>
+
+
+<style>
+    body{
+    background-image: url('https://c0.wallpaperflare.com/preview/194/165/260/stopwatch-gears-work-working-time.jpg'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+    text-align: center;
+    height: 100vh;
+
+    
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color:greenyellow;
+width: 150px;
+display: inline-block;
+background-color: black;
+}
+button{
+    background-color: cornflowerblue;
+    color:black;
+    width: 200px;
+    height: 50px;
+    border-radius: 60px;
+}
+button:active{
+    background-color: orange;
+}
+button:hover{
+    background-color: red;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="page.js">
+var firstheading = document.getElementById("minu")
+var secondtheading = document.getElementById("sec")
+var thirdheading = document.getElementById("misec")
+var hour = document.getElementById("hour")
+var d = 0 ;
+var a = 0;
+var b = 0 ;
+var c = 0 ;
+var hello ;
+
+function timer (){
+    c++
+     thirdheading.innerHTML = c
+    if( c >= 100){
+        b++
+        secondtheading.innerHTML = b
+        c = 0
+    }else if(b>= 60 ){
+        a++
+        firstheading.innerHTML = a
+        b = 0
+    }
+    else if(a >= 60){
+        d++
+        hour.innerHTML = d
+        a = 0  
+
+    }
+
+}
+
+function go() {
+    
+    if (!hello) {
+        hello = setInterval(timer, 10)
+    }
+}
+function ruk() {
+    clearInterval(hello)
+    hello = null; 
+}
+
+function re() {
+    a = 0;
+    b = 0;
+    c = 0;
+    d = 0;
+    thirdheading.innerHTML = c;
+    secondtheading.innerHTML = b;
+    firstheading.innerHTML = a;
+    hour.innerHTML = d;
+    ruk();
+    hello = null; 
+}
+    </script>
+
+</body>
+</html>
